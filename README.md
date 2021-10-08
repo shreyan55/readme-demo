@@ -164,104 +164,147 @@ Then add a title and description to your pull request that explains your preciou
  
 </details>
 
-# Teini
+# Hacktoberfest tv-series search app
+ 
+ Link: https://ietebitmesra.github.io/Hacktoberfest_21/
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzeekrey%2Fteini&env=STRIPE_SECRET_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,SHOP_NAME,SHOP_CONTACT,SHOP_HEADLINE,SHOP_SUBHEADLINE&envDescription=You'll%20need%20Stripe%20API%20key.&envLink=https%3A%2F%2Fstripe.com%2Fdocs%2Fkeys&project-name=teini-copy&repo-name=teini-copy&redirect-url=https%3A%2F%2Fkrey.io&demo-title=Teini%20-%20The%20smallest%20eShop%20in%20the%20world&demo-description=A%20real%20online%20store.%20But%20without%20the%20costs%20and%20without%20complexity.&demo-url=https%3A%2F%2Fteini.co&demo-image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1494256997604-768d1f608cac%3Fixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1829%26q%3D80) 
+Idea images:
+(Final project may or may not look the same)
 
-## Installation
+![enter image description here](https://i.ibb.co/GMDG6BY/Screenshot-2021-10-06-at-11-07-22-PM.png)
 
-### ...if you're not a developer
+![enter image description here](https://i.ibb.co/984dNgX/Screenshot-2021-10-06-at-11-13-43-PM.png)
 
-#### Accounts needed
+## About The Project:
 
-Running Teini should be easy and for free. Although you'll need to create some accounts to make it work:
+This app use [TV Maze api](https://www.tvmaze.com/api) , to get data of TV series, please use it's documentation for reference. We would like the application to be responsive and helpful to it's users by showing complete details.
 
-| Account       | Description/What it does                                                   | Link                |
-| ------------- | -------------------------------------------------------------------------- | ------------------- |
-| Vercel        | Deploys and keeps the actual website running. It's awesome.                | https://vercel.com/ |
-| Stripe        | Provides the whole checkout and payment infrastructure. It's awesome, too. | https://stripe.com  |
-| Github/Gitlab | The place where the source code is stored. Awesome - yep.                  | https://github.com  |
+We would also like to add support for Movies in our app, Find and implement suitable api for movies details along with , info , thumbnail and rating.
 
-> 🤑 While Vercel and Github should be free while respecting their fair use policies, Stripe will cost some money. Fortunately, these are transaction-dependent.
-#### Environment Variables
+**Features:**
 
-To configure your store you need to set some meta data and credentials upfront. The following data needs to be set:
+1. Add Navbar (Home, Explore, About, etc..(as needed))
 
-| Environment Variable               | Description                                                                                          | Default |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
-| STRIPE_SECRET_KEY                  | The Stripe secret key: https://stripe.com/docs/keys#obtain-api-keys                                  |
-| NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY | The Stripe publishable key: https://stripe.com/docs/keys#obtain-api-keys                             |
-| SHOP_NAME                          | Will show up in the browser tab and in the seo config.                                               |
-| SHOP_CONTACT                       | A way customers can contact your. Could be an email or a Twitter handle. Will show up in the footer. |
-| SHOP_HEADLINE                      | Will show up on the index (start) page and in the seo config.                                        |
-| SHOP_SUBHEADLINE                   | Will show up on the index (start) page and in the seo config.                                        |
+2. Better background
 
-Once you got everything together you can finally deploy your own version for Teini:
+3. Popular shows on home page
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzeekrey%2Fteini&env=STRIPE_SECRET_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,SHOP_NAME,SHOP_CONTACT,SHOP_HEADLINE,SHOP_SUBHEADLINE&envDescription=You'll%20need%20Stripe%20API%20key.&envLink=https%3A%2F%2Fstripe.com%2Fdocs%2Fkeys&project-name=teini-copy&repo-name=teini-copy&redirect-url=https%3A%2F%2Fkrey.io&demo-title=Teini%20-%20The%20smallest%20eShop%20in%20the%20world&demo-description=A%20real%20online%20store.%20But%20without%20the%20costs%20and%20without%20complexity.&demo-url=https%3A%2F%2Fteini.co&demo-image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1494256997604-768d1f608cac%3Fixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1829%26q%3D80)
+4. Present the searched show with basic details (name, summary, rating)
 
-## Usage
+5. Show other details like episodes, seasons, cast, etc. ( Preferably as shown in the last image )
 
-Once your store is up and running you definitly what to add your own products. Here is how to do this:
+6. List all episodes in episode tabs
 
-### 1. Access the repository
+7. List all seasons in season tab
 
-To make changes you need to access the repository and change the actual source code. To do this you'll need the following tools (all of them are for free):
+8. Also may add movie search functionality
 
-- Git -> https://git-scm.com/
-- VSCode -> https://code.visualstudio.com/
-- Prisma Studio -> https://www.prisma.io/studio
+9. Add a movie section in nav-bar/ or may do differently.
 
-Once you got everything installed open a terminal and type the following command:
+10. Show basic details of movies
 
-```bash
-git clone https://github.com/username/reponame
-```
+11. Show cast of movies
 
-> 💡 The repo url depends on your choosen service, username and repo name.
-### 2. Make changes to the product database
+12. Make UI better
 
-Open Prisma Studio and open the product.db file. It is located at the root level of your repo and called `products.db`. Once the database add, update or delete products.
+13. Make application responsive.
 
-### 3. Add product images
+14. Add your favourite tv-series in explore tab :)
 
-Teini holds all its static files like product images in the `public` folder. Product images in particular are store under `public/prodcuts/[productid]`. To add product images you just need to add a folder with the corresponding product-id (see your products.db) and put all product images in there.
+**Optional Feature:**
 
-> 💡 Google recommends using the WebP as image format. You can convert your files here: https://cloudconvert.com/webp-converter
-### 3. Make changes to the store itself
+1. Add summary for each episode
 
-Open a terminal and navigate (cd) to your local repository copy. Run this command:
+2. Add date every episode air.
 
-```bash
-code .
-```
+3. Present all cast along with photos in cast tag
 
-Now VSCode should open and you can change what ever you want.
+4. Include other images related to show in gallery tab
 
-### 4.Push your changes
+5. Show the platform where the show/movies are streaming
 
-To make your changes visible you need to run the following commands:
+6. Link to YouTube trailer.
 
-```bash
-git add .
-git commit -m "A message describing your work like; Added images for product 1."
-git push
-```
+**Note:**
 
-If your go to https://vercel.com and open your project you should see that a deployment is started. If it is successfull you customers can see your changes. If it failed feel free to create an issue: https://github.com/zeekrey/teini/issues/new/choose
+1. Users may open their own issues and also can implement any other awesome feature if they wish(as long as it is relevant to the project).
 
-### ...if you're a developer
+2. You may refer to docs of the api at [https://www.tvmaze.com/api](https://www.tvmaze.com/api). The main data from API is already fetched (using axios) and Important details like show Id, which will later be useful for other API calls is already stored in the JavaScript variables.
 
-Clone, Edit, Push. Do what ever you want.
+3. We are using Bootstrap in this app.
+
+4. You are always welcome to make the code functionality better and faster.
+
+Any small/big but useful changes are welcome. Hope, it would be a great learning experience for you all :D
 
 
-## Notes
+## Steps To follow: 📜
 
-Credits for the used photos:
+**(a) Go to the issues tab of this repository and find any issue that you would like to work on. You can also create your own issue.**
 
-Product photos
-Photo by <a href="https://unsplash.com/@boxedwater?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boxed Water Is Better</a> on <a href="https://unsplash.com/@boxedwater?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+**(b) Get yourself assigned to that issue.**
 
-Success Page photo
-Photo by <a href="https://unsplash.com/@jdent?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jason Dent</a> on <a href="https://unsplash.com/s/photos/celebrate?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+**(c ) Open the cloned repository on your local machine.**
 
+**(d) $cd Hacktoberfest_21**
+
+**(e) Create a separate branch for that issue $git checkout -b issueName/issueNumber**
+
+**(f) Try your best to fix the issue (Good Luck! =))**
+
+**(g) Once the issue is fixed, just give us a Pull Request, and you are done!!**
+
+**Congratulations !!** **🥳**
+
+
+
+
+
+# prizes
+
+
+![Prizes](https://raw.githubusercontent.com/sakpab2602/Hacktoberfest-21/master/Task1/img/prizes.jpeg)
+
+This time around we have different prizes for the top 5 contributors who will be judged on the basis of points distribution criteria in each task!
+The special prizes include : -
+1. Smart-watches
+2. Ear buds
+3. Bags
+
+**To be eligible for prizes register <a href="http://bit.ly/hacktober2021">HERE</a>**
+
+**To View contribution ** : [contribution](https://mayukhpankaj.github.io/IETE-hacktoberfest/)
+
+ # Prize distribution criteria
+
+- First 5 contributors who have made pull requests in all 3 mentioned tasks.
+
+- Winners will be selected on the basis of
+
+  - First come first serve (FCFS)
+  - QUALITY OF CODE
+
+- Points will be allotted for each task and highest scorers will be selected as winners. Marks distribution criteria will be mentioned in detail in respective task's `readme.md`
+
+- All decisions made by IETE will be final and binding, no changes will be entertained after the result declaration.
+
+
+View Your contribution at: 
+
+## Points distribution
+
+- Implementing any of the features which are mandatory are important to mark your score in order to be eligible for prizes.
+- Also resolving issues will add an extra benefit.
+- Optional tasks:
+  - Contributing towards optional tasks will give you an edge and extra points.
+  - You can also create your own issue and get yourself assigned to it, this will be highly appreciated.
+  - Contributing towards making the website responsive.
+
+**Humble Request !important**
+
+All the enthusiastic contributors are requested to add their part carefully following the proper code block which is to be to be copy-pasted and then edited. Also, before sending a PR, it would be great if you yourself render the html page at least once to see how your changes are manifested. There have been instances where a single contribution destroyed the entire layout of the page, even affecting others' contributions.
+
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
